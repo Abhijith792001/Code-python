@@ -1,0 +1,6 @@
+Video Downloder 
+from pytube import YouTube
+link = input("Enter The link : ")
+video = YouTube(link)
+stream = video.streams.get_highest_resolution()
+stream.download()
